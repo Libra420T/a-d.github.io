@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelique & Damion's Wedding!!</title>
+    <style>
+    body { margin: 0; font-family: sans-serif; }
+    #banner {
+        background-image: url('wedding-header.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        height: 400px; 
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Improves text readability */
+        font-size: 2rem;
+    }
+    #timer { font-weight: bold; color: #ffcc00; }
+</style>
+
+    <div id="banner">
+        Time remaining: <span id="timer">Loading...</span>
+    </div>
+
+    <script>
+        const targetDate = new Date("Jun 7, 2026 12:00:00").getTime();
+
+        const timerInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
