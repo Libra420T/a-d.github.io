@@ -5,28 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angelique & Damion's Wedding!!</title>
     <style>
-        body { margin: 0; font-family: sans-serif; }
-        #banner {
-            background-image: url('banner.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 400px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            font-size: 2rem;
+        body { margin: 0; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
+        
+        #image-container {
+            width: 100%;
+            max-width: 1200px;
         }
-        #timer { font-weight: bold; color: #ffcc00; }
+        
+        #image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #countdown-section {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        
+        #timer { font-weight: bold; color: #d4a373; font-size: 2rem; }
     </style>
 </head>
 <body>
 
-    <div id="banner">
-        <div>Time remaining:</div>
+    <div id="image-container">
+        <img src="banner.png" alt="Wedding Banner">
+    </div>
+
+    <div id="countdown-section">
+        <div>Time remaining until the wedding:</div>
         <div id="timer">Loading...</div>
     </div>
 
