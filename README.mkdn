@@ -1,0 +1,11 @@
+<p align="center">
+  <img src="banner.png" alt="Wedding Banner" width="100%">
+</p>
+
+### 💍 Damion & Angelique's Wedding Countdown 💍
+
+![Wedding Date](https://img.shields.io/badge/Wedding_Date-June_7th-pink)
+<br>
+![Couple](https://img.shields.io/badge/Couple-Damion_%26_Angelique-blueviolet)
+<br>
+[ ![Status](https://img.shields.io/badge/Status-View_Live_Countdown-brightgreen) ](https://libra420t.github.io/a-d.github.io/)
